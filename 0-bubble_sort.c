@@ -26,7 +26,7 @@ void swap_bubble(int *a, int *b)
 
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, sz = size;
+	size_t j, sz = size;
 	bool booln = false;
 
 	if (array == NULL || size < 2)
@@ -35,11 +35,11 @@ void bubble_sort(int *array, size_t size)
 	while (booln == false)
 	{
 		booln = true;
-		for (i = 0; i < sz - 1; i++)
+		for (j = 0; j < sz - 1; j++)
 		{
-			if (array[i] > array[i + 1])
+			if (array[j] > array[j + 1])
 			{
-				swap_bubble(array + i, array + i + 1);
+				swap_bubble(array + j, array + j + 1);
 				print_array(array, size);
 				booln = false;
 			}
