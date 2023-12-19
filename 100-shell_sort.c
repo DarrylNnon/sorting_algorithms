@@ -4,13 +4,14 @@
  *@a: to be swapped.
  *@b: to be swapped.
  * Return: Always 0
+ * Author: Darryl Nnon
  */
-void swap_bubble(int *a, int *b)
+void swap_bubble(int *c, int *b)
 {
 	int temp;
 
-	temp = *a;
-	*a = *b;
+	temp = *c;
+	*c = *b;
 	*b = temp;
 }
 

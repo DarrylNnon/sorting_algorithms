@@ -9,6 +9,7 @@
  *@false: false is equivalent to 0
  *@true: equivalent to 1
  * Return: nothing
+ * Author: Darryl Nnon
  */
 typedef enum bool
 {

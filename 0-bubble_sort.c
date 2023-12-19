@@ -5,6 +5,7 @@
  *@a: element to be swapped.
  *@b: element to be swapped.
  * Return: nothing.
+ * Author: Darryl Nnon
  */
 
 void swap_bubble(int *a, int *b)

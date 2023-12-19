@@ -4,18 +4,18 @@
  * get_max - To get the max of the array
  *@array: array to be sorted
  *@size: size to be sorted
- *
+ *Author : Darryl Nnon
  * Return: int
  */
 int get_max(int *array, int size)
 {
-	int mx, i;
+	int mx, j;
 
-	for (mx = array[0], i = 1; i < size; i++)
+	for (mx = array[0], j = 1; j < size; j++)
 	{
 		if (array[i] > mx)
 		{
-			mx = array[i];
+			mx = array[j];
 		}
 	}
 	return (mx);
@@ -31,28 +31,28 @@ int get_max(int *array, int size)
  */
 void lsd_sort(int *array, size_t size, int exp, int *copy)
 {
-	size_t i;
+	size_t j;
 	int bucket[10] = {0};
 
-	for (i = 0; i < size; i++)
+	for (j = 0; j < size; j++)
 	{
-		bucket[(array[i] / exp) % 10]++;
+		bucket[(array[j] / exp) % 10]++;
 	}
 
-	for (i = 1; i < 10; i++)
+	for (j = 1; j < 10; j++)
 	{
-		bucket[i] = bucket[i] + bucket[i - 1];
+		bucket[j] = bucket[j] + bucket[j - 1];
 	}
 
-	for (i = size - 1; (int)i >= 0; i--)
+	for (j = size - 1; (int)j >= 0; j--)
 	{
-		copy[bucket[(array[i] / exp) % 10] - 1] = array[i];
-		bucket[(array[i] / exp) % 10]--;
+		copy[bucket[(array[j] / exp) % 10] - 1] = array[j];
+		bucket[(array[j] / exp) % 10]--;
 	}
 
-	for (i = 0; i < size; i++)
+	for (j = 0; j < size; j++)
 	{
-		array[i] = copy[i];
+		array[j] = copy[j];
 	}
 }
 /**

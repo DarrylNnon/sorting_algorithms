@@ -5,6 +5,7 @@
  *@a: pointer to be swapped.
  *@b: pointer to be swapped.
  * Return: Always 0
+ * Author: Darryl Nnon
  */
 void swap_bubble(int *a, int *b)
 {
